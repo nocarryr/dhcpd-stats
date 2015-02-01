@@ -9,7 +9,7 @@ CONF_FILENAME = os.path.expanduser('~/.dhcpd_stats')
 class Config(object):
     dhcpd_conf = '/etc/dhcp/dhcpd.conf'
     dhcpd_leases = '/var/lib/dhcp/dhcpd.leases'
-    log_file_path = '~/dhcpd_stats/'
+    log_file_path = os.path.join(os.getcwd(), 'logs')
     log_file_format = '%Y%m%d_%H%M.json'
     server_timezone_name = 'US/Central'
     def __init__(self, **kwargs):
